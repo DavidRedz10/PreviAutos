@@ -1,0 +1,250 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Font and typography =====*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: #051226;
+ 
+
+  
+}
+
+h1{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== INPUT =====*/
+.login{
+  display: grid;
+  grid-template-columns: 100%;
+  height: 100vh;
+  background: rgb(255,210,77);
+  background: linear-gradient(90deg, rgba(255,210,77,1) 0%, rgba(255,210,77,1) 30%, rgba(255,176,32,1) 65%, rgba(255,255,255,1) 65%);
+}
+
+.login__content{
+  display: grid;
+}
+
+.login__img{
+  justify-self: center; 
+}
+
+.login__img img{
+  width: 310px;
+  margin-top: 1.5rem;
+}
+
+.login__forms{
+  position: relative;
+  height: 368px;
+}
+
+.login__registre, .login__create{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  background-color: #FFF;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  animation-duration: .4s;
+  animation-name: animate-login;
+}
+
+
+.login__title{
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+.login__box{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem 1rem;
+  background-color: #FFF;
+  margin-top: 0.5rem;
+  border-radius: .5rem;
+  width: 70%;
+  margin-left: 15%;
+  border:solid;
+  border-color: #A49EAC;
+}
+
+.login__icon{
+  font-size: 1.5rem;
+  color: #666666;
+}
+
+.login__input{
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: #051226;
+}
+
+.login__input::placeholder{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: #A49EAC;
+  width: 70%;
+  margin-left: 15%; 
+}
+
+.login__forgot{
+  display: block;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 5rem;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: #FFD24D;
+}
+
+.login__button{
+  display: block;
+  padding: 0.5rem;
+  margin: 2rem 0;
+  background: rgb(255,176,32);
+  background: linear-gradient(99deg, rgba(255,176,32,1) 33%, rgba(255,210,77,1) 64%, rgba(255,210,77,1) 72%, rgba(255,210,77,1) 90%, rgba(255,210,77,1) 100%);
+  color: #051226;
+  font-weight: 800;
+  text-align: center;
+  border-radius: .5rem;
+  transition: .3s;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.login__account, .login__signin, .login__signup{
+  font-weight: 400;
+  font-size: var(--small-font-size);
+}
+
+.login__account{
+  color: #051226;
+}
+
+.login__signin, .login__signup{
+  color: #FFD24D;
+  cursor: pointer;
+}
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 576px){
+  .login__forms{
+    width: 450px;
+    justify-self: center;
+    row-gap: 10em;
+  }
+}
+
+
+@media screen and (min-width: 1024px){
+  .login{
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .login__content{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+  }
+
+  .login__img{
+    display: flex;
+    width: 700px;
+    height: auto;
+    background-color:  rgba(255, 255, 255, 0);
+    border-radius: 1rem;
+    padding-left: 1re;
+  }
+
+  .login__img img{
+    width: 500px;
+    margin-top: 0;
+    margin-left: -7rem;
+  }
+
+  .login__registre, .login__create{
+    left: -11rem;
+  }
+
+  .login__registre{
+    bottom: -2rem;
+  }
+
+  .login__create{
+    bottom: -5.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .login{
+    height: 100vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 56%, rgba(255,176,32,1) 56%, rgba(255,210,77,1) 71%, rgba(255,210,77,1) 100%);
+    
+  }
+
+  .body{
+    overflow: auto;
+    overflow-x: auto;
+  }
+  
+}
+
+@media screen and (max-width: 576px){
+  .login__forms{
+    width: 80%;
+    justify-self: center;
+    position: relative;
+    top: 20%;
+  }
+  .login__button{
+    width: 70%;
+  
+  }
+  .login__input{
+    width: 100%;
+  }
+
+}
